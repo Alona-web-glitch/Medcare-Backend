@@ -16,6 +16,23 @@ CSRF_TRUSTED_ORIGINS =[
 
 CORS_ALLOWED_ORIGINS =[]
 
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'Doctor',
+    'Appointment',
+    'API',
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'corsheaders',
+    'dj_database_url'
+]
+
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
