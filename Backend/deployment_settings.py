@@ -7,11 +7,13 @@ DEBUG = False
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = [
-    os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+    os.environ.get('RENDER_EXTERNAL_HOSTNAME'),
+    'https://medcare-frontend-nwh6.onrender.com'
 ]
 
 CSRF_TRUSTED_ORIGINS =[
     'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME'),
+    'https://medcare-frontend-nwh6.onrender.com'
 ]
 
 CORS_ALLOWED_ORIGINS =[]
