@@ -8,31 +8,33 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = [
     os.environ.get('RENDER_EXTERNAL_HOSTNAME'),
-    'https://medcare-frontend-nwh6.onrender.com'
+    # 'https://medcare-frontend-nwh6.onrender.com'
 ]
 
 CSRF_TRUSTED_ORIGINS =[
     'https://' + os.environ.get('RENDER_EXTERNAL_HOSTNAME'),
-    'https://medcare-frontend-nwh6.onrender.com'
+    # 'https://medcare-frontend-nwh6.onrender.com'
 ]
 
-CORS_ALLOWED_ORIGINS =[]
-
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'Doctor',
-    'Appointment',
-    'API',
-    'rest_framework',
-    'rest_framework_simplejwt',
-    'corsheaders',
-    'dj_database_url'
+CORS_ALLOWED_ORIGINS =[
+    ''
 ]
+
+# INSTALLED_APPS = [
+#     'django.contrib.admin',
+#     'django.contrib.auth',
+#     'django.contrib.contenttypes',
+#     'django.contrib.sessions',
+#     'django.contrib.messages',
+#     'django.contrib.staticfiles',
+#     'Doctor',
+#     'Appointment',
+#     'API',
+#     'rest_framework',
+#     'rest_framework_simplejwt',
+#     'corsheaders',
+#     'dj_database_url'
+# ]
 
 
 MIDDLEWARE = [
@@ -47,7 +49,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
-ROOT_URLCONF = 'Backend.urls'
+# ROOT_URLCONF = 'Backend.urls'
 
 STORAGES = {
     "default": {
