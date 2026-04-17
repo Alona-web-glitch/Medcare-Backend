@@ -6,9 +6,17 @@ from django.contrib.auth.models import User
 
 # DOCTOR
 class DoctorSerializer(serializers.ModelSerializer):
+    img = serializers.SerializerMethodField()
+
     class Meta:
         model = Doctors
         fields = '__all__'
+
+    def get_img(self, obj):
+        try:
+            return obj.img.url if obj.img else None
+        except:
+            return None
 
 # APPOINTMENT
 class AppointmentSerializer(serializers.ModelSerializer):
