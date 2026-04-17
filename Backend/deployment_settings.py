@@ -20,6 +20,8 @@ CORS_ALLOWED_ORIGINS =[
     ''
 ]
 
+WSGI_APPLICATION = 'Backend.wsgi.application'
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,7 +51,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
-# ROOT_URLCONF = 'Backend.urls'
+ROOT_URLCONF = 'Backend.urls'
 
 STORAGES = {
     "default": {
