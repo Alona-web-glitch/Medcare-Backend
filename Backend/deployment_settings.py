@@ -16,9 +16,8 @@ CSRF_TRUSTED_ORIGINS =[
     # 'https://medcare-frontend-nwh6.onrender.com'
 ]
 
-CORS_ALLOWED_ORIGINS =[
-    ''
-]
+CORS_ALLOW_ALL_ORIGINS = True
+
 
 WSGI_APPLICATION = 'Backend.wsgi.application'
 
