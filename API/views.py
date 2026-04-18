@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from.serializer import *
+from .serializer import *
 from rest_framework import generics
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
